@@ -1,0 +1,16 @@
+*.ml*.d
+*.cm[ixt]*
+Makefile.coq*
+.Makefile.coq.d
+*~
+*.[ao]
+.coqdeps.d
+*.vo
+*.vos
+*.vok
+*.glob
+*.aux
+.merlin
+
+# by convention g_foo.ml is generated
+g_*.ml
