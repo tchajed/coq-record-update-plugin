@@ -1,1 +1,1 @@
-Declare ML Module "tuto1_plugin".
+Declare ML Module "record_update_plugin".
