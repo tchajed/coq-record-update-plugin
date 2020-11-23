@@ -1,13 +1,7 @@
-From RecordUpdate Require Import Loader.
+From RecordUpdate Require Import RecordUpdatePlugin.
 
 Record X := { A : nat; B : nat; C : bool; }.
 
-Inductive X' := mkX' (A: nat) (B: nat) (C: bool).
+Instance etaX : Settable X := _.
 
-Theorem eta_X : X -> X.
-Proof.
-  Fail solve_with_eta A.
-  Fail solve_with_eta option.
-  Fail solve_with_eta X'.
-  solve_with_eta X.
-Defined.
+Definition setA a x := set A (fun _ => a) x.
