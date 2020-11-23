@@ -15,17 +15,6 @@ open Eta_expansion
 
 }
 
-(*** Introducing terms ***)
-
-(*
- * We can call the tactics defined in Tactics within our tactics.
- * Here we call intros.
- *)
-TACTIC EXTEND my_intro
-| [ "my_intro" ident(i) ] ->
-{ Tactics.introduction i }
-  END
-
   TACTIC EXTEND solve_with_eta
 | [ "solve_with_eta" constr(r) ] ->
 { solve_with_eta r }
