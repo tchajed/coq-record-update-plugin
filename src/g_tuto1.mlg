@@ -1,0 +1,32 @@
+DECLARE PLUGIN "tuto1_plugin"
+
+  {
+
+    (* If we forget this line and include our own tactic definition using
+       TACTIC EXTEND, as below, then we get the strange error message
+       no implementation available for Tacentries, only when compiling
+       theories/Loader.v
+    *)
+open Ltac_plugin
+(* This module defines the types of arguments to be used in the
+   EXTEND directives below, for example the string one. *)
+open Stdarg
+open Eta_expansion
+
+}
+
+(*** Introducing terms ***)
+
+(*
+ * We can call the tactics defined in Tactics within our tactics.
+ * Here we call intros.
+ *)
+TACTIC EXTEND my_intro
+| [ "my_intro" ident(i) ] ->
+{ Tactics.introduction i }
+  END
+
+  TACTIC EXTEND solve_with_eta
+| [ "solve_with_eta" constr(r) ] ->
+{ solve_with_eta r }
+  END

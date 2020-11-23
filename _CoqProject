@@ -1,2 +1,10 @@
 -R theories RecordUpdate
 -I src
+
+theories/Loader.v
+theories/Demo.v
+
+src/eta_expansion.ml
+src/eta_expansion.mli
+src/g_tuto1.mlg
+src/tuto1_plugin.mlpack
