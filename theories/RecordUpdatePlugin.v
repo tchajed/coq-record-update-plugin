@@ -1,4 +1,4 @@
-Declare ML Module "record_update_plugin".
+From RecordUpdate Require Import EtaExpansion.
 From RecordUpdate Require Export RecordSet.
 
 Ltac solve_settable :=

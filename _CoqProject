@@ -1,6 +1,7 @@
 -R theories RecordUpdate
 -I src
 
+theories/EtaExpansion.v
 theories/RecordUpdatePlugin.v
 theories/Demo.v
 
