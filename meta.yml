@@ -1,0 +1,55 @@
+---
+fullname: Record Update Plugin
+shortname: coq-record-update-plugin
+opam_name: coq-record-update-plugin
+organization: tchajed
+community: false
+travis: true
+coqdoc: false
+
+synopsis: >-
+  Plugin to reduce boilerplate in coq-record-update
+
+description: |-
+  coq-record-update requires some boilerplate to list a record's fields. This
+  library eliminates that boilerplate by getting the fields in a plugin via the
+  Coq API.
+
+authors:
+- name: Tej Chajed
+  initial: true
+
+maintainers:
+- name: Tej Chajed
+  nickname: tchajed
+
+opam-file-maintainer: tchajed@gmail.com
+
+opam-file-version: dev
+
+license:
+  fullname: MIT License
+  identifier: MIT
+
+supported_coq_versions:
+  text: 8.12 or later
+  opam: '{(>= "8.12" & < "8.13~") | (= "dev")}'
+
+dependencies:
+  - opam:
+      name: coq-record-update
+      version: '{>= "0.2.0"}'
+
+tested_coq_opam_versions:
+- version: dev
+- version: '8.12'
+
+
+namespace: RecordUpdate
+
+keywords:
+- name: record
+
+categories:
+- name: Computer Science/Data Types and Data Structures
+---

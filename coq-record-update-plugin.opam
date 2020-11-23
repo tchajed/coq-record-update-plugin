@@ -1,0 +1,30 @@
+opam-version: "2.0"
+maintainer: "tchajed@gmail.com"
+version: "dev"
+
+homepage: "https://github.com/tchajed/coq-record-update-plugin"
+dev-repo: "git+https://github.com/tchajed/coq-record-update-plugin.git"
+bug-reports: "https://github.com/tchajed/coq-record-update-plugin/issues"
+license: "MIT"
+
+synopsis: "Plugin to reduce boilerplate in coq-record-update"
+description: """
+coq-record-update requires some boilerplate to list a record's fields. This
+library eliminates that boilerplate by getting the fields in a plugin via the
+Coq API."""
+
+build: [make "-j%{jobs}%" ]
+install: [make "install"]
+depends: [
+  "coq" {(>= "8.12" & < "8.13~") | (= "dev")}
+  "coq-record-update" {>= "0.2.0"}
+]
+
+tags: [
+  "category:Computer Science/Data Types and Data Structures"
+  "keyword:record"
+  "logpath:RecordUpdate"
+]
+authors: [
+  "Tej Chajed"
+]

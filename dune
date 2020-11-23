@@ -1,0 +1,4 @@
+(coq.theory
+ (name RecordUpdate)
+ (package coq-record-update-plugin)
+ (synopsis "Plugin to reduce boilerplate in coq-record-update"))
