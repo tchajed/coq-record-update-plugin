@@ -3,7 +3,6 @@
 
 theories/EtaExpansion.v
 theories/RecordUpdatePlugin.v
-theories/Demo.v
 
 src/eta_expansion.ml
 src/eta_expansion.mli

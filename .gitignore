@@ -1,6 +1,7 @@
 *.ml*.d
 *.cm[ixt]*
-Makefile.coq*
+Makefile.coq
+Makefile.coq.conf
 .Makefile.coq.d
 *~
 *.[ao]
