@@ -35,7 +35,6 @@ Module test.
     (* error message (missing projection) *)
     Fail EtaExpansion.solve_with_eta X.
 
-    (* TODO: these raise Not_found *)
     Fail EtaExpansion.solve_with_eta Y.
     Fail EtaExpansion.solve_with_eta option.
   Abort.
