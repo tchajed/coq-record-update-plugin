@@ -25,3 +25,18 @@ Proof.
     ltac:(fun r proj => constr:(r (proj x)))
     ltac:(fun k => exact k).
 Qed.
+
+Module test.
+  Record X := mkX { A : nat; _ : bool;  }.
+  Inductive Y := mkY (A:nat) (B:bool).
+
+  Goal X -> X.
+  Proof.
+    (* error message (missing projection) *)
+    Fail EtaExpansion.solve_with_eta X.
+
+    (* TODO: these raise Not_found *)
+    Fail EtaExpansion.solve_with_eta Y.
+    Fail EtaExpansion.solve_with_eta option.
+  Abort.
+End test.

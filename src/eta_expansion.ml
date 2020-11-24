@@ -4,7 +4,7 @@ let mkApp1 f arg = EConstr.mkApp (f, Array.of_list [arg])
 
 let traverse_list_option (x: 'a option list) : 'a list option =
   try Some (List.map Option.get x)
-  with Not_found -> None
+  with Option.IsNone -> None
 
 let solve_with_eta (r: EConstr.t) =
   let env = Global.env () in
