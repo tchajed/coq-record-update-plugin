@@ -4,7 +4,7 @@ shortname: coq-record-update-plugin
 opam_name: coq-record-update-plugin
 organization: tchajed
 community: false
-travis: true
+action: true
 coqdoc: false
 
 synopsis: >-
