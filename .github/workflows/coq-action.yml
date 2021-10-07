@@ -6,7 +6,10 @@ on:
       - master
   pull_request:
     branches:
-      - '**'
+      - "**"
+  schedule:
+    # Friday 8am UTC (3am EST)
+    - cron: "0 8 * * FRI"
 
 jobs:
   build:
@@ -15,18 +18,15 @@ jobs:
     strategy:
       matrix:
         image:
-          - 'coqorg/coq:dev'
-          - 'coqorg/coq:8.12'
-          - 'coqorg/coq:8.11'
-          - 'coqorg/coq:8.10'
+          - "coqorg/coq:dev"
+          - "coqorg/coq:8.13"
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
       - uses: coq-community/docker-coq-action@v1
         with:
-          opam_file: 'coq-record-update-plugin.opam'
+          opam_file: "coq-record-update-plugin.opam"
           custom_image: ${{ matrix.image }}
-
 # See also:
 # https://github.com/coq-community/docker-coq-action#readme
 # https://github.com/erikmd/docker-coq-github-action-demo
