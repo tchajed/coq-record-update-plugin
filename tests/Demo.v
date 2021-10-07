@@ -4,10 +4,10 @@ Module basic_tests.
   Record X := mkX { A : nat; B : nat; C : bool; }.
 
   Definition setA a x := set A (fun _ => a) x.
-  Instance setB_wf : SetterWf B := _.
-  Instance etaX : Settable X := _.
+  #[local] Instance setB_wf : SetterWf B := _.
+  #[local] Instance etaX : Settable X := _.
   Definition setA2 a x := set A (fun _ => a) x.
-  Instance setA_wf : SetterWf A := _.
+  #[local] Instance setA_wf : SetterWf A := _.
 End basic_tests.
 
 Module errors.

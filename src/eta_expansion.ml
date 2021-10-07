@@ -1,9 +1,10 @@
 open Pp
+open Structures
 
 let mkApp1 f arg = EConstr.mkApp (f, Array.of_list [arg])
 
 let lookup_projections_opt ind =
-  try Some (Recordops.lookup_projections ind)
+  try Some (Structure.find_projections ind)
   with Not_found -> None
 
 let traverse_list_opt (x: 'a option list) : 'a list option =
