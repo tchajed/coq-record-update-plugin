@@ -1,6 +1,6 @@
 The command has indeed failed with message:
 eta expansion: inductive X does not have projection functions for all fields
 The command has indeed failed with message:
-exa expansion: inductive Y is not a record
+eta expansion: inductive Y is not a record
 The command has indeed failed with message:
-exa expansion: inductive option is not a record
+eta expansion: inductive option is not a record

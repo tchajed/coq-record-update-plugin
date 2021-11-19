@@ -20,7 +20,7 @@ let solve_with_eta (r: EConstr.t) =
        0 is the constructor index here *)
     let r_constructor = EConstr.mkConstructU ((ind, 0 + 1), u) in
     (match lookup_projections_opt ind with
-     | None -> let _ = CErrors.user_err (str "exa expansion: inductive" ++ spc () ++
+     | None -> let _ = CErrors.user_err (str "eta expansion: inductive" ++ spc () ++
                                          Printer.pr_econstr_env env sigma r ++ spc () ++
                                          str "is not a record") in
        Proofview.tclUNIT ()
