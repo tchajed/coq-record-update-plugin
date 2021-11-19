@@ -12,6 +12,7 @@ Makefile.coq.conf
 *.glob
 *.aux
 .merlin
+_build/
 
 # by convention g_foo.ml is generated
 g_*.ml
